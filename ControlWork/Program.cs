@@ -25,11 +25,12 @@ for (int i = 0; i < array.Length; i++)
 {
     str = Convert.ToString(Console.ReadLine());
     if (str.Length <= 3)
-    {
-        array[i] = str;
-    }
+        {
+           array[i] = str;
+        }
 }
-System.Console.WriteLine($"У вас получился массив [{String.Join(", ", array)}]");
+array = array.Where(x => x != null).ToArray();
+System.Console.WriteLine($"Элементы массива, содержащие не более трёх символов: [{String.Join(", ", array)}]");
 
 
 // string[] array2 = new string[5];
