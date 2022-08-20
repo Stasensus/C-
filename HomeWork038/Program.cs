@@ -25,4 +25,4 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 System.Console.WriteLine($"[{String.Join("; ", array)}]");
-System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива составляет {max - min}");
+System.Console.WriteLine($"Разница между максимальным и минимальным элементом массива составляет {Math.Round((max - min), 2)}");
