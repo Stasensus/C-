@@ -20,17 +20,30 @@
 
 string[] array = new string[5];
 string str;
+int count = 0;
+int j = 0;
 Console.WriteLine("Введите строки: ");
 for (int i = 0; i < array.Length; i++)
 {
-    str = Convert.ToString(Console.ReadLine());
+    array[i] = Convert.ToString(Console.ReadLine());
+    str = array[i];
     if (str.Length <= 3)
         {
-           array[i] = str;
+           count++;
         }
 }
-array = array.Where(x => x != null).ToArray();
-System.Console.WriteLine($"Элементы массива, содержащие не более трёх символов: [{String.Join(", ", array)}]");
+string[] array2 = new string[count];
+for (int i = 0; i < array.Length; i++)
+{
+    str = array[i];
+    if (str.Length <= 3)
+    {
+        array2[j] = array[i];
+        j++;
+    }
+}
+// array = array.Where(x => x != null).ToArray();
+System.Console.WriteLine($"Элементы массива, содержащие не более трёх символов: [{String.Join(", ", array2)}]");
 
 
 // string[] array2 = new string[5];
