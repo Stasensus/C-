@@ -43,7 +43,8 @@ for (int i = 0; i < array.Length; i++)
     }
 }
 // array = array.Where(x => x != null).ToArray();
-System.Console.WriteLine($"Элементы массива, содержащие не более трёх символов: [{String.Join(", ", array2)}]");
+if (array2.Length == 0) System.Console.WriteLine("Массив не содержит элементов короче 4 символов");
+else System.Console.WriteLine($"Элементы массива, содержащие не более трёх символов: [{String.Join(", ", array2)}]");
 
 
 // string[] array2 = new string[5];
