@@ -25,7 +25,7 @@ int j = 0;
 Console.WriteLine("Введите строки: ");
 for (int i = 0; i < array.Length; i++)
 {
-    array[i] = Convert.ToString(Console.ReadLine());
+    array[i] = Console.ReadLine();
     str = array[i];
     if (str.Length <= 3)
         {
