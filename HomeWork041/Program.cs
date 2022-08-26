@@ -1,10 +1,10 @@
 ﻿System.Console.WriteLine("Сколько планируете ввести чисел?");
-int x = Convert.ToInt32(Console.ReadLine());
-int count = 0;
+int quantityOfNumbers = Convert.ToInt32(Console.ReadLine());
+int positiveNumbers = 0;
 System.Console.WriteLine("Вводите, пожалуйста:");
-for (int i = 0; i < x; i++)
+for (int i = 0; i < quantityOfNumbers; i++)
 {
-    int y = Convert.ToInt32(Console.ReadLine());
-    if (y > 0) count++;
+    int inputNumber = Convert.ToInt32(Console.ReadLine());
+    if (inputNumber > 0) positiveNumbers++;
 }
-System.Console.WriteLine($"Количество введенных положительных чисел: {count}");
+System.Console.WriteLine($"Количество введенных положительных чисел: {positiveNumbers}");
